@@ -19,3 +19,45 @@
 @import "blocks/screen.scss";
 @import "blocks/slider.scss";
 @import "blocks/social-block.scss";
+
+@import "animations/fadeIn.scss";
+@import "animations/appearanceToLeft.scss";
+
+// animations
+.screen {
+  &.active {
+    .intro__message {
+      animation-name: fadeIn;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+    }
+
+    .game__title {
+      animation-name: appearanceToLeft;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+    }
+  }
+}
+
+.slider {
+  .slider__item {
+    &.swiper-slide-active {
+      .slider__item-text {
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+      }
+    }
+
+    &.swiper-slide-next {
+      .slider__item-text {
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        animation-delay: 0.2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: both;
+      }
+    }
+  }
+}
