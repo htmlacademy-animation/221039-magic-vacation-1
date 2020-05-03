@@ -1231,6 +1231,12 @@ img {
       .disclaimer a {
         padding: 0.9rem 0; } }
 
+@keyframes expandingToLeft {
+  from {
+    width: 80px; }
+  to {
+    width: 100%; } }
+
 .form {
   position: relative;
   display: flex;
@@ -1258,12 +1264,18 @@ img {
       opacity: 1;
       pointer-events: auto; } }
 
+.form__field-wrapper {
+  flex-grow: 2;
+  width: calc(100% - 21rem);
+  margin-right: 3rem;
+  display: flex;
+  justify-content: flex-end; }
+
 .form__field {
   flex: none;
-  margin-right: 3rem;
   padding: 0 5.6rem;
   height: 6rem;
-  width: calc(100% - 21rem);
+  width: 100%;
   text-transform: uppercase;
   font: inherit;
   font-size: 2.4rem;
@@ -1355,6 +1367,11 @@ img {
   @media (max-width: 768px) and (orientation: landscape) {
     .form--result .form__field {
       width: calc(100% - 5rem); } }
+
+.screen.active .form__field {
+  animation-name: expandingToLeft;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out; }
 
 .game {
   flex-grow: 1;
@@ -1454,6 +1471,14 @@ img {
 .game__button {
   margin: 0 30px 30px;
   display: block; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
 
 .intro {
   display: flex;
@@ -1587,6 +1612,11 @@ img {
     .intro__date {
       margin: 0 0 0 -5px;
       font-size: 48px; } }
+
+.screen.active .intro__message {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out; }
 
 .page-header {
   position: fixed;
@@ -1807,7 +1837,8 @@ img {
       width: 0;
       height: 2px;
       background-color: #ffffff;
-      left: 0;
+      left: auto;
+      right: 0;
       transition: width 0.35s ease-in-out; }
       @media (min-width: 2000px) {
         .page-header__menu a::after {
@@ -1824,7 +1855,9 @@ img {
           right: 0;
           background-color: #5f458c; } }
     .page-header__menu a.active::after, .page-header__menu a:hover::after {
-      width: 100%; }
+      width: 100%;
+      left: 0;
+      right: auto; }
     .page-header__menu a:hover, .page-header__menu a:focus {
       color: #a67ee5;
       outline: none; }
@@ -2820,6 +2853,14 @@ img {
 .screen--rules {
   background-color: #5f458c; }
 
+@keyframes fadeInToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(35px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
 .slider {
   position: relative;
   flex-grow: 1;
@@ -3049,6 +3090,28 @@ img {
         height: 0.4rem;
         background-color: #ffffff; } }
 
+.slider .slider__item.swiper-slide-active .slider__item-text {
+  animation-name: fadeInToLeft;
+  animation-duration: 0.5s;
+  animation-delay: 0.25s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both; }
+
+.slider .slider__item.swiper-slide-next .slider__item-text {
+  animation-name: fadeInToLeft;
+  animation-duration: 0.5s;
+  animation-delay: 0.4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
 .social-block {
   position: relative;
   transition: 0.35s ease-in-out; }
@@ -3130,9 +3193,7 @@ img {
   top: 100%;
   right: 0;
   margin-top: 1.5rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.5s ease-in-out; }
+  pointer-events: none; }
   @media (min-width: 2000px) {
     .social-block__list {
       margin-top: 15px; } }
@@ -3193,7 +3254,9 @@ img {
   height: 4rem;
   color: #ffffff;
   border: 2px solid transparent;
-  border-radius: 50%; }
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-out; }
   @media (min-width: 2000px) {
     .social-block__link {
       width: 40px;
@@ -3244,43 +3307,16 @@ img {
         width: 10px;
         height: 10px; } }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px); }
-  to {
-    opacity: 1;
-    transform: translateY(0); } }
-
-@keyframes appearanceToLeft {
-  from {
-    opacity: 0;
-    transform: translateX(20px); }
-  to {
-    opacity: 1;
-    transform: translateX(0); } }
-
-.screen.active .intro__message {
+.social-block--active .social-block__link {
+  opacity: 1;
   animation-name: fadeIn;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out; }
-
-.screen.active .game__title {
-  animation-name: appearanceToLeft;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out; }
-
-.slider .slider__item.swiper-slide-active .slider__item-text {
-  animation-name: fadeIn;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out; }
-
-.slider .slider__item.swiper-slide-next .slider__item-text {
-  animation-name: fadeIn;
-  animation-duration: 0.5s;
-  animation-delay: 0.2s;
+  animation-duration: 0.3s;
   animation-timing-function: ease-out;
-  animation-fill-mode: both; }
+  animation-fill-mode: backwards; }
+  .social-block--active .social-block__link--insta {
+    animation-delay: 0.1s; }
+  .social-block--active .social-block__link--vk {
+    animation-delay: 0.2s; }
 
 
 /*# sourceMappingURL=style.min.css.map*/
