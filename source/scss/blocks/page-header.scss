@@ -250,7 +250,8 @@
       width: 0;
       height: 2px;
       background-color: $c-light;
-      left: 0;
+      left: auto;
+      right: 0;
       transition: width 0.35s ease-in-out;
 
       @media (min-width: $stop-scaling) {
@@ -275,6 +276,8 @@
     &:hover {
       &::after {
         width: 100%;
+        left: 0;
+        right: auto;
       }
     }
 

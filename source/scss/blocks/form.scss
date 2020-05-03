@@ -1,3 +1,5 @@
+@import "../animations/expandingToLeft.scss";
+
 .form {
   position: relative;
   display: flex;
@@ -29,12 +31,19 @@
   }
 }
 
+.form__field-wrapper {
+  flex-grow: 2;
+  width: calc(100% - 21rem);
+  margin-right: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .form__field {
   flex: none;
-  margin-right: 3rem;
   padding: 0 5.6rem;
   height: 6rem;
-  width: calc(100% - 21rem);
+  width: 100%;
   text-transform: uppercase;
   font: inherit;
   font-size: 2.4rem;
@@ -143,6 +152,17 @@
 
     @media (max-width: $mobile) and (orientation: landscape) {
       width: calc(100% - 5rem);
+    }
+  }
+}
+
+// animations
+.screen {
+  &.active {
+    .form__field {
+      animation-name: expandingToLeft;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
     }
   }
 }
