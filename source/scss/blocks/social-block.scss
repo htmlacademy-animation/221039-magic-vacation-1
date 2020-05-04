@@ -1,5 +1,8 @@
+@import "../animations/fadeIn.scss";
+
 .social-block {
   position: relative;
+  transition: 0.35s ease-in-out;
 
   &:hover {
     .social-block__list {
@@ -17,6 +20,7 @@
   height: 4rem;
   color: $c-dark;
   border-radius: 50%;
+  transition: 0.35s ease-in-out;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -35,6 +39,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transition: 0.35s ease-in;
   }
 
   svg {
@@ -87,8 +92,8 @@
   top: 100%;
   right: 0;
   margin-top: 1.5rem;
-  opacity: 0;
   pointer-events: none;
+  opacity: 0;
 
   @media (min-width: $stop-scaling) {
     margin-top: 15px;
@@ -239,6 +244,34 @@
         width: 10px;
         height: 10px;
       }
+    }
+  }
+}
+
+// animations
+.social-block--active {
+  .social-block__list {
+    animation-name: fadeIn;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+  }
+
+  .social-block__link {
+
+    &--insta {
+      animation-name: fadeIn;
+      animation-duration: 0.3s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: backwards;
+    }
+
+    &--vk {
+      animation-name: fadeIn;
+      animation-duration: 0.3s;
+      animation-delay: 0.1s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: backwards;
     }
   }
 }

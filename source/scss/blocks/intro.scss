@@ -1,3 +1,5 @@
+@import "../animations/fadeIn.scss";
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -160,5 +162,16 @@
   @media (min-width: $stop-scaling) {
     margin: 0 0 0 -5px;
     font-size: 48px;
+  }
+}
+
+// animations
+.screen {
+  &.active {
+    .intro__message {
+      animation-name: fadeIn;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+    }
   }
 }
