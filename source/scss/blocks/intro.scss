@@ -74,6 +74,9 @@
   flex: none;
   width: 50rem;
   max-width: 50%;
+  opacity: 0;
+  transform: translateY(200px);
+  transition: transform 0.3s $timing-function-1, opacity 0.3s $timing-function-2;
 
   @media (min-width: $stop-scaling) {
     width: 500px;
@@ -143,6 +146,8 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.2;
+  opacity: 0;
+  transition: opacity 0.3s 0.2s ease-in;
 
   @media (min-width: $stop-scaling) {
     margin: 0 0 16px;
@@ -166,12 +171,23 @@
 }
 
 // animations
-.screen {
-  &.active {
-    .intro__message {
-      animation-name: fadeIn;
-      animation-duration: 0.5s;
-      animation-timing-function: ease-out;
+body.ready {
+  .intro__info {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .intro__label {
+    opacity: 1;
+  }
+
+  .screen {
+    &.active {
+      .intro__message {
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+      }
     }
   }
 }
