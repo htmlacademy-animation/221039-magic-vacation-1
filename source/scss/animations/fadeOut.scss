@@ -1,9 +1,16 @@
 @keyframes fadeOut {
-  from {
+  0% {
     opacity: 1;
+    height: 100%;
   }
 
-  to {
+  99% {
     opacity: 0;
+    height: 100%;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0;
   }
 }
