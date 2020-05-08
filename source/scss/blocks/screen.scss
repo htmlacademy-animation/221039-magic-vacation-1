@@ -1,3 +1,6 @@
+@import "../animations/fillFromBottom";
+@import "../animations/fadeOut.scss";
+
 .screen {
   position: relative;
   display: flex;
@@ -353,4 +356,28 @@
 
 .screen--rules {
   background-color: $c-dark;
+}
+
+.story-background {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: $c-dark;
+  z-index: 9;
+
+  &.start-animation {
+    animation-name: fillFromBottom;
+    animation-duration: 0.35s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+
+  &.end-animation {
+    animation-name: fadeOut;
+    animation-duration: 0.35s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+  }
 }
