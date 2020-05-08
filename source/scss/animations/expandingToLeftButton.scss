@@ -1,0 +1,17 @@
+@import "../general/variables.scss";
+
+@keyframes expandingToLeftButton {
+  0% {
+    width: 50px;
+    color: rgba($c-purple, 0);
+  }
+
+  75% {
+    color: rgba($c-purple, 0);
+  }
+
+  100% {
+    width: 190px;
+    color: rgba($c-purple, 1);
+  }
+}

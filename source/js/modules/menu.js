@@ -22,8 +22,15 @@ export default () => {
         document.body.classList.remove(`menu-opened`);
       }
 
+      const rulesLink = document.querySelector(`.js-rules-link`);
+      const isCurrentMenuLinkRules = menuLinks[i].getAttribute(`href`) === `#rules`;
+
       const isCurrentMenuLinkPrizes = menuLinks[i].getAttribute(`href`) === `#prizes`;
       const isCurrentLocationStory = window.location.toString().includes(`#story`);
+
+      if (isCurrentMenuLinkRules && !!rulesLink && rulesLink.classList.contains(`active`)) {
+        rulesLink.classList.remove(`active`);
+      }
 
       if (isCurrentMenuLinkPrizes && isCurrentLocationStory) {
         evt.preventDefault();

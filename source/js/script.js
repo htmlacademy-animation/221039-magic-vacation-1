@@ -27,3 +27,9 @@ document.addEventListener(`DOMContentLoaded`, loadHandler);
 function loadHandler() {
   document.body.classList.add(`ready`);
 }
+
+const rulesLastItem = document.querySelector(`.js-rules-last-item p`);
+const rulesLink = document.querySelector(`.js-rules-link`);
+rulesLastItem.addEventListener(`animationend`, function () {
+  rulesLink.classList.add(`active`);
+});
