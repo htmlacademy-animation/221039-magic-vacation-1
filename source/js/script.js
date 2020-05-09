@@ -8,6 +8,7 @@ import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
+import TextLettersAnimation from "./modules/textLettersAnimation";
 
 // init modules
 mobileHeight();
@@ -21,6 +22,39 @@ social();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
+
+const LETTERS_ANIMATION_PARAMETERS = {
+  animationDuration: 500,
+  animationTimeInterval: 30,
+  cssClassForActivateAnimation: `active`,
+  cssProperty: `transform`
+};
+
+const animatedSlogan = new TextLettersAnimation(
+    `.js-intro-title`,
+    LETTERS_ANIMATION_PARAMETERS.animationDuration,
+    LETTERS_ANIMATION_PARAMETERS.animationTimeInterval,
+    LETTERS_ANIMATION_PARAMETERS.cssClassForActivateAnimation,
+    LETTERS_ANIMATION_PARAMETERS.cssProperty
+);
+
+const animatedDate = new TextLettersAnimation(
+    `.js-intro-date`,
+    LETTERS_ANIMATION_PARAMETERS.animationDuration,
+    LETTERS_ANIMATION_PARAMETERS.animationTimeInterval,
+    LETTERS_ANIMATION_PARAMETERS.cssClassForActivateAnimation,
+    LETTERS_ANIMATION_PARAMETERS.cssProperty
+);
+
+animatedSlogan.prepareText();
+animatedSlogan.runAnimation();
+
+animatedDate.prepareText();
+document
+  .querySelector(`.js-intro-title .text-word:last-of-type span:last-of-type`)
+  .addEventListener(`transitionend`, () => {
+    animatedDate.runAnimation();
+  });
 
 document.addEventListener(`DOMContentLoaded`, loadHandler);
 
