@@ -25,7 +25,7 @@ fullPageScroll.init();
 
 const LETTERS_ANIMATION_PARAMETERS = {
   animationDuration: 500,
-  animationTimeInterval: 30,
+  animationTimeInterval: 25,
   cssClassForActivateAnimation: `active`,
   cssProperty: `transform`
 };
