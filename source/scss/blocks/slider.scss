@@ -1,3 +1,9 @@
+@import "../general/variables.scss";
+@import "../animations/fadeIn.scss";
+@import "../animations/translateToLeft10.scss";
+@import "../animations/translateToLeftAndRotate.scss";
+@import "../animations/translateToRightAndRotate.scss";
+
 .slider {
   position: relative;
   flex-grow: 1;
@@ -155,6 +161,7 @@
   width: 4rem;
   height: 4rem;
   color: $c-dark;
+  transition: 0.35s ease-in-out;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
@@ -170,6 +177,7 @@
     border: 2px solid $c-light;
     border-radius: 50%;
     z-index: -1;
+    transition: 0.35s ease-out;
   }
 
   svg {
@@ -273,6 +281,57 @@
       width: 0.4rem;
       height: 0.4rem;
       background-color: $c-light;
+    }
+  }
+}
+
+// animations
+.slider {
+  .slider__item {
+    &.swiper-slide-active {
+      .slider__item-text {
+        animation-name: fadeIn, translateToLeft10;
+        animation-duration: 0.5s;
+        animation-delay: 0.25s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: both;
+      }
+    }
+
+    &.swiper-slide-next {
+      .slider__item-text {
+        animation-name: fadeIn, translateToLeft10;
+        animation-duration: 0.5s;
+        animation-delay: 0.5s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: both;
+      }
+    }
+  }
+}
+
+.screen--story.active {
+  .slider__controls,
+  .slider__pagination {
+    animation-name: fadeIn;
+    animation-duration: 0.3s;
+    animation-delay: 0.65s;
+    animation-timing-function: $timing-function-1;
+    animation-fill-mode: both;
+  }
+
+  .slider__control {
+    animation-duration: 0.5s;
+    animation-delay: 0.65s;
+    animation-timing-function: $timing-function-3;
+    animation-fill-mode: both;
+
+    &--prev {
+      animation-name: translateToRightAndRotate;
+    }
+
+    &--next {
+      animation-name: translateToLeftAndRotate;
     }
   }
 }

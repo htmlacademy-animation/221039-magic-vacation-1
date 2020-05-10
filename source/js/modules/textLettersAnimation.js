@@ -30,7 +30,7 @@ export default class TextLettersAnimation {
         const letterElement = document.createElement(`span`);
         letterElement.textContent = letter;
 
-        const animationLetterDelay = index % 2 === 0 ? this._animationDelay : this._animationDelay + this._animationTimeInterval * 2;
+        const animationLetterDelay = index % 2 === 0 ? this._animationDelay : this._animationDelay + this._animationTimeInterval * 3;
 
         letterElement.style.transition = `${this._cssProperty} ${this._animationDuration}ms ease ${animationLetterDelay}ms`;
 
