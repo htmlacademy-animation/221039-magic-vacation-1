@@ -1,5 +1,6 @@
 @import "../animations/appearance.scss";
-@import "../animations/fadeInToLeft.scss";
+@import "../animations/fadeIn.scss";
+@import "../animations/translateToTop.scss";
 @import "../animations/expandingToLeftButton.scss";
 @import "../general/variables.scss";
 
@@ -221,7 +222,7 @@
 .screen--rules.active {
   .rules__item {
     p {
-      animation-name: fadeInToLeft;
+      animation-name: fadeIn, translateToTop;
       animation-duration: 0.5s;
       animation-timing-function: ease-out;
       animation-fill-mode: both;

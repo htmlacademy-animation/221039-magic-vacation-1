@@ -1,4 +1,5 @@
 @import "../animations/fadeIn.scss";
+@import "../animations/translateToTop.scss";
 
 .intro {
   display: flex;
@@ -184,7 +185,7 @@ body.ready {
   .screen {
     &.active {
       .intro__message {
-        animation-name: fadeIn;
+        animation-name: fadeIn, translateToTop;
         animation-duration: 0.5s;
         animation-timing-function: ease-out;
       }

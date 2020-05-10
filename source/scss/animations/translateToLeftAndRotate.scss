@@ -1,0 +1,9 @@
+@keyframes translateToLeftAndRotate {
+  from {
+    transform: translateX(250%) rotate(90deg);
+  }
+
+  to {
+    transform: translateX(0) rotate(0);
+  }
+}
