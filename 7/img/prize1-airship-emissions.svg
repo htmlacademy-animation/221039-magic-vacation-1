@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 105 269.43 30">
+  <g>
+    <animate
+      attributeType="CSS"
+      attributeName="opacity"
+      from="1"
+      to="0"
+      dur="0.5s"
+      begin="2.5s"
+      calcMode="paced"
+      fill="freeze"
+    />
+    <g id="upLine">
+      <animateTransform
+        attributeName="transform"
+        type="scale"
+        values="1,1; 0.5,1; 1,1; 0.7,1"
+        dur="0.7s"
+        begin="0.35s"
+        calcMode="paced"
+        fill="freeze"
+        repeatCount="indefinite"
+      />
+      <line x1="0" y1="110.03" x2="22" y2="110.03" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+
+    <g id="downLine">
+      <animateTransform
+        attributeName="transform"
+        type="scale"
+        values="1,1; 0.5,1; 1,1; 0.7,1"
+        dur="0.7s"
+        begin="0.5s"
+        calcMode="paced"
+        fill="freeze"
+        repeatCount="indefinite"
+      />
+      <line x1="0" y1="131.77" x2="22" y2="131.77" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+
+    <g id="middleLine">
+      <animateTransform
+        attributeName="transform"
+        type="scale"
+        values="1,1; 0.5,1; 1,1; 0.7,1"
+        dur="0.7s"
+        calcMode="paced"
+        fill="freeze"
+        repeatCount="indefinite"
+      />
+      <line x1="0" y1="121.52" x2="37" y2="121.52" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
