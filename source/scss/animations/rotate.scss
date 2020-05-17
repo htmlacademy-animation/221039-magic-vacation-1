@@ -1,0 +1,9 @@
+@keyframes rotate {
+  from {
+    transform: rotateX(0);
+  }
+
+  to {
+    transform: rotateX(25deg);
+  }
+}

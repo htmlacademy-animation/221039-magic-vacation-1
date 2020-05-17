@@ -1,3 +1,8 @@
+@import "../animations/rotate.scss";
+@import "../animations/translateToLeft100.scss";
+@import "../animations/translateToLeft10.scss";
+@import "../animations/fadeIn.scss";
+
 .prizes {
   flex-grow: 1;
   display: flex;
@@ -218,6 +223,12 @@
 }
 
 .prizes__icon {
+  display: none;
+
+  img {
+    display: none;
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     margin-right: 3.8rem;
   }
@@ -226,6 +237,31 @@
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  &-airship {
+    position: relative;
+  }
+
+  &-airship-dirigible {
+    animation: rotate;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+    &-window {
+      position: absolute;
+      top: 127px;
+      left: 0;
+    }
+  }
+
+  &-airship-emissions {
+    position: absolute;
+    top: 73px;
+    left: 0;
+    transform: rotate(180deg) translateX(225px);
   }
 }
 
@@ -327,6 +363,91 @@
     @media (max-width: $mobile) and (orientation: landscape) {
       width: 0.5rem;
       height: 0.5rem;
+    }
+  }
+}
+
+.screen--prizes.active {
+  .prizes__icon {
+    display: block;
+
+    img {
+      display: block;
+    }
+  }
+
+  .prizes__item {
+    &--journeys {
+      position: relative;
+      animation-name: translateToLeft100;
+      animation-duration: 0.7s;
+      animation-timing-function: linear;
+      animation-delay: 3s;
+      animation-fill-mode: both;
+
+      .prizes__icon--from {
+        position: absolute;
+        bottom: auto;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+      }
+
+      .prizes__icon--to {
+        position: relative;
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        animation-delay: 2.5s;
+        animation-fill-mode: both;
+
+        img {
+          position: relative;
+          z-index: 2;
+        }
+
+        img:first-child,
+        img:last-child {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img:last-child {
+          z-index: 3;
+        }
+      }
+
+      .prizes__desc {
+        b {
+          animation-name: fadeIn;
+          animation-duration: 0.5s;
+          animation-delay: 2.5s;
+          animation-fill-mode: both;
+        }
+
+        span {
+          animation-name: fadeIn, translateToLeft10;
+          animation-duration: 0.5s;
+          animation-delay: 2.5s;
+          animation-fill-mode: both;
+        }
+      }
+    }
+
+    &--cases {
+      animation-name: fadeIn;
+      animation-duration: 0.5s;
+      animation-delay: 4s;
+      animation-fill-mode: both;
+    }
+
+    &--codes {
+      animation-name: fadeIn;
+      animation-duration: 0.5s;
+      animation-delay: 4.3s;
+      animation-fill-mode: both;
     }
   }
 }
