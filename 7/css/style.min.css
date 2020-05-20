@@ -2164,23 +2164,6 @@ body.ready .page-header__logo {
     display: block;
     width: 100%;
     height: auto; }
-  .prizes__icon-airship {
-    position: relative; }
-  .prizes__icon-airship-dirigible {
-    animation: rotate;
-    animation-timing-function: ease-in-out;
-    animation-duration: 1s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite; }
-    .prizes__icon-airship-dirigible-window {
-      position: absolute;
-      top: 127px;
-      left: 0; }
-  .prizes__icon-airship-emissions {
-    position: absolute;
-    top: 73px;
-    left: 0;
-    transform: rotate(180deg) translateX(225px); }
 
 .prizes__desc {
   display: flex;
@@ -2267,6 +2250,28 @@ body.ready .page-header__logo {
   display: block; }
   .screen--prizes.active .prizes__icon img {
     display: block; }
+  .screen--prizes.active .prizes__icon-clouds {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    animation: cloudsTransformation;
+    animation-delay: 3.05s;
+    animation-duration: 0.01s;
+    animation-fill-mode: forwards; }
+    .screen--prizes.active .prizes__icon-clouds img {
+      object-fit: cover; }
+  .screen--prizes.active .prizes__icon-airship {
+    position: relative; }
+  .screen--prizes.active .prizes__icon-airship-dirigible {
+    animation: rotate;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: 3; }
+  .screen--prizes.active .prizes__icon-airship-emissions {
+    position: absolute;
+    top: 110px;
+    left: 0; }
 
 .screen--prizes.active .prizes__item--journeys {
   position: relative;
@@ -2278,8 +2283,8 @@ body.ready .page-header__logo {
   .screen--prizes.active .prizes__item--journeys .prizes__icon--from {
     position: absolute;
     bottom: auto;
-    top: -20px;
-    left: 50%;
+    top: -66px;
+    left: 33%;
     transform: translateX(-50%);
     height: 100%; }
   .screen--prizes.active .prizes__item--journeys .prizes__icon--to {
@@ -2321,6 +2326,14 @@ body.ready .page-header__logo {
   animation-duration: 0.5s;
   animation-delay: 4.3s;
   animation-fill-mode: both; }
+
+@keyframes cloudsTransformation {
+  from {
+    width: 100%;
+    transform: scale(1) translate(0, 0); }
+  to {
+    width: 100px;
+    transform: scale(0.5) translate(388px, 270px); } }
 
 .result {
   flex-grow: 1;
