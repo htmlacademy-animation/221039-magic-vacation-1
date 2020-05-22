@@ -4,7 +4,6 @@
         #branch {
           transform-box: fill-box;
           transform-origin: 100% 100%;
-          border: 1px solid red;
         }
       ]]>
   </style>
