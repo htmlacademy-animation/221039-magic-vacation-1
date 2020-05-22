@@ -10,6 +10,9 @@ import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 import TextLettersAnimation from "./modules/textLettersAnimation";
 
+// views
+import prizes from './view/prizes';
+
 // init modules
 mobileHeight();
 slider();
@@ -67,3 +70,9 @@ const rulesLink = document.querySelector(`.js-rules-link`);
 rulesLastItem.addEventListener(`animationend`, function () {
   rulesLink.classList.add(`active`);
 });
+
+const isCurrentLocationPrizes = window.location.toString().includes(`#prizes`);
+
+if (isCurrentLocationPrizes) {
+  prizes();
+}

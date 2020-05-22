@@ -450,10 +450,18 @@
     }
 
     &--cases {
-      animation-name: fadeIn;
-      animation-duration: 0.5s;
-      animation-delay: 4s;
-      animation-fill-mode: both;
+      .prizes__icon {
+        width: 300px;
+        position: relative;
+        left: -62px;
+      }
+
+      .prizes__desc {
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        animation-delay: 3.5s;
+        animation-fill-mode: both;
+      }
     }
 
     &--codes {
