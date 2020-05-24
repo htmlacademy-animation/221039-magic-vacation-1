@@ -465,10 +465,12 @@
     }
 
     &--codes {
-      animation-name: fadeIn;
-      animation-duration: 0.5s;
-      animation-delay: 4.3s;
-      animation-fill-mode: both;
+      .prizes__desc {
+        animation-name: fadeIn;
+        animation-duration: 0.3s;
+        animation-delay: 6.3s;
+        animation-fill-mode: both;
+      }
     }
   }
 }

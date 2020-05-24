@@ -290,6 +290,10 @@
         background-color: $c-purple;
       }
     }
+
+    &.active {
+      pointer-events: none;
+    }
   }
 }
 
