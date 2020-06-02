@@ -15,6 +15,10 @@ export default () => {
 
         const resultTitle = targetEl[0].querySelector(`.result__title`);
 
+        if (resultTitle.lastElementChild.tagName === `DIV`) {
+          resultTitle.removeChild(resultTitle.lastElementChild);
+        }
+
         switch (targetEl[0].getAttribute(`id`)) {
           case `result`:
             const imgTemplate1 = document.createElement(`div`);
