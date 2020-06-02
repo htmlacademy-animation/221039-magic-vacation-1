@@ -4,39 +4,39 @@
       color: #FFF;
       stroke-dasharray: 0 150;
       stroke-dashoffset: 500;
-      animation: dash 0.5s linear both;
+      animation: dash 0.35s linear both;
     }
 
     .delay-1 {
-      animation-delay: 0.08s;
+      animation-delay: 0.05s;
     }
 
     .delay-2 {
-      animation-delay: 0.11s;
+      animation-delay: 0.08s;
     }
 
     .delay-3 {
-      animation-delay: 0.14s;
+      animation-delay: 0.11s;
     }
 
     .delay-4 {
-      animation-delay: 0.17s;
+      animation-delay: 0.14s;
     }
 
     .delay-5 {
-      animation-delay: 0.2s;
+      animation-delay: 0.17s;
     }
 
     .delay-6 {
-      animation-delay: 0.23s;
+      animation-delay: 0.2s;
     }
 
     .delay-7 {
-      animation-delay: 0.26s;
+      animation-delay: 0.23s;
     }
 
     .delay-8 {
-      animation-delay: 0.29s;
+      animation-delay: 0.26s;
     }
 
     @keyframes dash {
@@ -53,7 +53,7 @@
         id="firstLetterAnimation"
         attributeName="transform"
         type="translate"
-        values="0, -100; 0, -99; 0, -98; 0, -96; 0, -85; 0, -55; 0, 0; 0, -20; 0, -20; 0, 0"
+        values="0, -90; 0, -89; 0, -88; 0, -85; 0, -77; 0, -67; 0, -57; 0, -47; 0, -36; 0, -25; 0, -13; 0, 0; 0, -3; 0, -5; 0, -6; 0, -6; 0, -5; 0, -3; 0, 0"
         dur="0.7s"
         begin="0.05s"
         fill="freeze"
@@ -67,7 +67,7 @@
       <animateTransform
         attributeName="transform"
         type="translate"
-        values="0, -100; 0, -99; 0, -98; 0, -96; 0, -85; 0, -55; 0, 0; 0, -20; 0, -20; 0, 0"
+        values="0, -90; 0, -89; 0, -88; 0, -85; 0, -77; 0, -67; 0, -57; 0, -47; 0, -36; 0, -25; 0, -13; 0, 0; 0, -3; 0, -5; 0, -6; 0, -6; 0, -5; 0, -3; 0, 0"
         dur="0.7s"
         fill="freeze"
         begin="0.08s"
@@ -83,7 +83,7 @@
       <animateTransform
         attributeName="transform"
         type="translate"
-        values="0, -100; 0, -99; 0, -98; 0, -96; 0, -85; 0, -55; 0, 0; 0, -20; 0, -20; 0, 0"
+        values="0, -90; 0, -89; 0, -88; 0, -85; 0, -77; 0, -67; 0, -57; 0, -47; 0, -36; 0, -25; 0, -13; 0, 0; 0, -3; 0, -5; 0, -6; 0, -6; 0, -5; 0, -3; 0, 0"
         dur="0.7s"
         fill="freeze"
         begin="0.11s"
@@ -97,7 +97,7 @@
       <animateTransform
         attributeName="transform"
         type="translate"
-        values="0, -100; 0, -99; 0, -98; 0, -96; 0, -85; 0, -55; 0, 0; 0, -20; 0, -20; 0, 0"
+        values="0, -90; 0, -89; 0, -88; 0, -85; 0, -77; 0, -67; 0, -57; 0, -47; 0, -36; 0, -25; 0, -13; 0, 0; 0, -3; 0, -5; 0, -6; 0, -6; 0, -5; 0, -3; 0, 0"
         dur="0.7s"
         fill="freeze"
         begin="0.14s"
@@ -111,7 +111,7 @@
       <animateTransform
         attributeName="transform"
         type="translate"
-        values="0, -100; 0, -99; 0, -98; 0, -96; 0, -85; 0, -55; 0, 0; 0, -20; 0, -20; 0, 0"
+        values="0, -90; 0, -89; 0, -88; 0, -85; 0, -77; 0, -67; 0, -57; 0, -47; 0, -36; 0, -25; 0, -13; 0, 0; 0, -3; 0, -5; 0, -6; 0, -6; 0, -5; 0, -3; 0, 0"
         dur="0.7s"
         fill="freeze"
         begin="0.17s"
@@ -126,7 +126,7 @@
       <animateTransform
         attributeName="transform"
         type="translate"
-        values="0, -100; 0, -99; 0, -98; 0, -96; 0, -85; 0, -55; 0, 0; 0, -20; 0, -20; 0, 0"
+        values="0, -90; 0, -89; 0, -88; 0, -85; 0, -77; 0, -67; 0, -57; 0, -47; 0, -36; 0, -25; 0, -13; 0, 0; 0, -3; 0, -5; 0, -6; 0, -6; 0, -5; 0, -3; 0, 0"
         dur="0.7s"
         fill="freeze"
         begin="0.2s"
@@ -141,7 +141,7 @@
       <animateTransform
         attributeName="transform"
         type="translate"
-        values="0, -100; 0, -99; 0, -98; 0, -96; 0, -85; 0, -55; 0, 0; 0, -20; 0, -20; 0, 0"
+        values="0, -90; 0, -89; 0, -88; 0, -85; 0, -77; 0, -67; 0, -57; 0, -47; 0, -36; 0, -25; 0, -13; 0, 0; 0, -3; 0, -5; 0, -6; 0, -6; 0, -5; 0, -3; 0, 0"
         dur="0.7s"
         fill="freeze"
         begin="0.23s"
@@ -156,7 +156,7 @@
       <animateTransform
         attributeName="transform"
         type="translate"
-        values="0, -100; 0, -99; 0, -98; 0, -96; 0, -85; 0, -55; 0, 0; 0, -20; 0, -20; 0, 0"
+        values="0, -90; 0, -89; 0, -88; 0, -85; 0, -77; 0, -67; 0, -57; 0, -47; 0, -36; 0, -25; 0, -13; 0, 0; 0, -3; 0, -5; 0, -6; 0, -6; 0, -5; 0, -3; 0, 0"
         dur="0.7s"
         fill="freeze"
         begin="0.26s"
@@ -171,7 +171,7 @@
       <animateTransform
         attributeName="transform"
         type="translate"
-        values="0, -100; 0, -99; 0, -98; 0, -96; 0, -85; 0, -55; 0, 0; 0, -20; 0, -20; 0, 0"
+        values="0, -90; 0, -89; 0, -88; 0, -85; 0, -77; 0, -67; 0, -57; 0, -47; 0, -36; 0, -25; 0, -13; 0, 0; 0, -3; 0, -5; 0, -6; 0, -6; 0, -5; 0, -3; 0, 0"
         dur="0.7s"
         fill="freeze"
         begin="0.29s"
