@@ -457,19 +457,39 @@
       }
 
       .prizes__desc {
-        animation-name: fadeIn;
-        animation-duration: 0.5s;
-        animation-delay: 3.5s;
-        animation-fill-mode: both;
+        b {
+          animation-name: fadeIn;
+          animation-duration: 0.1s;
+          animation-delay: 4.2s;
+          animation-fill-mode: both;
+        }
+
+        span {
+          animation-name: fadeIn, translateToLeft10;
+          animation-duration: 0.5s;
+          animation-delay: 4.2s;
+          animation-fill-mode: both;
+        }
       }
     }
 
     &--codes {
       .prizes__desc {
-        animation-name: fadeIn;
-        animation-duration: 0.3s;
-        animation-delay: 6.3s;
-        animation-fill-mode: both;
+        b {
+          width: 200px;
+          text-align: right;
+          animation-name: fadeIn;
+          animation-duration: 0.1s;
+          animation-delay: 6.5s;
+          animation-fill-mode: both;
+        }
+
+        span {
+          animation-name: fadeIn, translateToLeft10;
+          animation-duration: 0.5s;
+          animation-delay: 6.5s;
+          animation-fill-mode: both;
+        }
       }
     }
   }

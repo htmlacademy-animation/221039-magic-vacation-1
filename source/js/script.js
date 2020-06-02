@@ -12,6 +12,7 @@ import TextLettersAnimation from "./modules/textLettersAnimation";
 
 // views
 import prizes from './view/prizes';
+import {prizesCasesNumberAnimate, prizesCodesNumberAnimate} from './view/prizes-number';
 
 // init modules
 mobileHeight();
@@ -75,4 +76,19 @@ const isCurrentLocationPrizes = window.location.toString().includes(`#prizes`);
 
 if (isCurrentLocationPrizes) {
   prizes();
+
+  const prizesCasesNumberElement = document.querySelector(`.js-prizes-item-cases-number`);
+  const prizesCodesNumberElement = document.querySelector(`.js-prizes-item-codes-number`);
+
+  if (!!prizesCasesNumberElement) {
+    prizesCasesNumberElement.parentElement.addEventListener(`animationend`, () => {
+      prizesCasesNumberAnimate();
+    });
+  }
+
+  if (!!prizesCodesNumberElement) {
+    prizesCodesNumberElement.parentElement.addEventListener(`animationend`, () => {
+      prizesCodesNumberAnimate();
+    });
+  }
 }
