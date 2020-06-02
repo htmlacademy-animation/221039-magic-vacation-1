@@ -1,4 +1,5 @@
 import prizes from '../view/prizes';
+import gameTimer from '../view/game-timer';
 
 export default () => {
   let header = document.querySelector(`.js-header`);
@@ -28,6 +29,7 @@ export default () => {
       const isCurrentMenuLinkRules = menuLinks[i].getAttribute(`href`) === `#rules`;
 
       const isCurrentMenuLinkPrizes = menuLinks[i].getAttribute(`href`) === `#prizes`;
+      const isCurrentMenuLinkGame = menuLinks[i].getAttribute(`href`) === `#game`;
       const isCurrentLocationStory = window.location.toString().includes(`#story`);
 
       const prizesItemJourneys = document.querySelector(`.js-prizes-item-journeys`);
@@ -52,10 +54,14 @@ export default () => {
             storyBackground.classList.add(`end-animation`);
           });
         }
-      } else {
+      } else if (!!prizesItemJourneys.firstElementChild) {
         prizesItemJourneys.firstElementChild.remove();
         prizesItemCases.firstElementChild.remove();
         prizesItemCodes.firstElementChild.remove();
+      }
+
+      if (isCurrentMenuLinkGame) {
+        gameTimer();
       }
     });
   }
