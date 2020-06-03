@@ -12,6 +12,40 @@ export default () => {
         let targetEl = [].slice.call(results).filter(function (el) {
           return el.getAttribute(`id`) === target;
         });
+
+        const resultTitle = targetEl[0].querySelector(`.result__title`);
+
+        if (resultTitle.lastElementChild.tagName === `DIV`) {
+          resultTitle.removeChild(resultTitle.lastElementChild);
+        }
+
+        switch (targetEl[0].getAttribute(`id`)) {
+          case `result`:
+            const imgTemplate1 = document.createElement(`div`);
+            imgTemplate1.innerHTML = `<img src="img/title-victory.svg?${Math.random()}" alt="">`;
+            resultTitle.appendChild(imgTemplate1);
+
+            break;
+
+          case `result2`:
+            const imgTemplate2 = document.createElement(`div`);
+            imgTemplate2.innerHTML = `<img src="img/title-victory.svg?${Math.random()}" alt="">`;
+            resultTitle.appendChild(imgTemplate2);
+
+            break;
+
+          case `result3`:
+            const imgTemplate3 = document.createElement(`div`);
+            imgTemplate3.innerHTML = `<img src="img/title-failure.svg?${Math.random()}" alt="">`;
+            resultTitle.appendChild(imgTemplate3);
+
+            break;
+
+
+          default:
+            return;
+        }
+
         targetEl[0].classList.add(`screen--show`);
         targetEl[0].classList.remove(`screen--hidden`);
       });
