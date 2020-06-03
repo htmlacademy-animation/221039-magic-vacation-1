@@ -36,7 +36,7 @@ export default () => {
       const prizesItemCases = document.querySelector(`.js-prizes-item-cases`);
       const prizesItemCodes = document.querySelector(`.js-prizes-item-codes`);
 
-      if (isCurrentMenuLinkRules && !!rulesLink && rulesLink.classList.contains(`active`)) {
+      if (isCurrentMenuLinkRules && rulesLink && rulesLink.classList.contains(`active`)) {
         rulesLink.classList.remove(`active`);
       }
 
@@ -54,7 +54,7 @@ export default () => {
             storyBackground.classList.add(`end-animation`);
           });
         }
-      } else if (!!prizesItemJourneys.firstElementChild) {
+      } else if (prizesItemJourneys.firstElementChild) {
         prizesItemJourneys.firstElementChild.remove();
         prizesItemCases.firstElementChild.remove();
         prizesItemCodes.firstElementChild.remove();
