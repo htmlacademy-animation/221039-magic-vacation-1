@@ -48,13 +48,13 @@ export default () => {
         const prizesCasesNumberElement = document.querySelector(`.js-prizes-item-cases-number`);
         const prizesCodesNumberElement = document.querySelector(`.js-prizes-item-codes-number`);
 
-        if (!!prizesCasesNumberElement) {
+        if (prizesCasesNumberElement) {
           prizesCasesNumberElement.parentElement.addEventListener(`animationend`, () => {
             prizesCasesNumberAnimate();
           });
         }
 
-        if (!!prizesCodesNumberElement) {
+        if (prizesCodesNumberElement) {
           prizesCodesNumberElement.parentElement.addEventListener(`animationend`, () => {
             prizesCodesNumberAnimate();
           });
