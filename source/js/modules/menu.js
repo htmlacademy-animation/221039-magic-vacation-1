@@ -1,4 +1,5 @@
 import prizes from '../view/prizes';
+import {prizesCasesNumberAnimate, prizesCodesNumberAnimate, resetPrizesNumber} from '../view/prizes-number';
 import gameTimer from '../view/game-timer';
 
 export default () => {
@@ -42,6 +43,22 @@ export default () => {
 
       if (isCurrentMenuLinkPrizes) {
         prizes();
+        resetPrizesNumber();
+
+        const prizesCasesNumberElement = document.querySelector(`.js-prizes-item-cases-number`);
+        const prizesCodesNumberElement = document.querySelector(`.js-prizes-item-codes-number`);
+
+        if (prizesCasesNumberElement) {
+          prizesCasesNumberElement.parentElement.addEventListener(`animationend`, () => {
+            prizesCasesNumberAnimate();
+          });
+        }
+
+        if (prizesCodesNumberElement) {
+          prizesCodesNumberElement.parentElement.addEventListener(`animationend`, () => {
+            prizesCodesNumberAnimate();
+          });
+        }
 
         if (isCurrentLocationStory) {
           evt.preventDefault();
