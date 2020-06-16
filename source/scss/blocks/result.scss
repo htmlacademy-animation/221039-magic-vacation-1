@@ -34,6 +34,30 @@
   align-items: center;
   z-index: -1;
 
+  &--background {
+    left: 100px;
+  }
+
+  &--snowflake {
+    left: -425px;
+  }
+
+  &--snowflake-2 {
+    left: 325px;
+    transform: scale(-1, 1);
+  }
+
+  &--trees {
+    left: 150px;
+    display: flex;
+    flex-direction: row;
+
+    .canvas:last-child {
+      position: relative;
+      left: -10px;
+    }
+  }
+
   @media (orientation: portrait) {
     left: -1rem;
     right: -1rem;
@@ -51,6 +75,31 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+
+  .canvas {
+    width: 500px;
+    height: 800px;
+
+    &--background {
+      width: 750px;
+      height: 324px;
+    }
+
+    &--airplane {
+      width: 100px;
+      height: 100px;
+    }
+
+    &--snowflake {
+      width: 220px;
+      height: 350px;
+    }
+
+    &--trees {
+      width: 50px;
+      height: 300px;
+    }
   }
 }
 
