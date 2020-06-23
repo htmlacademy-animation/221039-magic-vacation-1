@@ -27,8 +27,8 @@ export default () => {
   // Snowflake 2 vars
   const SNOWFLAKE_INITIAL_POSITION_X_2 = 0;
   const SNOWFLAKE_INITIAL_POSITION_Y_2 = 175;
-  const SNOWFLAKE_IMAGE_WIDTH_2 = 150;
-  const SNOWFLAKE_IMAGE_HEIGHT_2 = 150;
+  const SNOWFLAKE_IMAGE_WIDTH_2 = 175;
+  const SNOWFLAKE_IMAGE_HEIGHT_2 = 175;
 
   const AMPLITUDE2 = 9;
   const ACCELERATION2 = 0.0155;
