@@ -330,11 +330,28 @@
     <section class="screen screen--hidden screen--result" id="result">
       <div class="screen__wrapper">
         <div class="result result--trip">
+          <div class="result__image result__image--background">
+            <canvas id="result-1-background" width="750" height="324" class="canvas canvas--background"></canvas>
+          </div>
+          <div class="result__image result__image--airplane">
+            <canvas id="result-1-airplane" width="100" height="100" class="canvas canvas--airplane"></canvas>
+          </div>
+          <div class="result__image result__image--trees">
+            <canvas id="result-1-tree-1" width="50" height="300" class="canvas canvas--trees"></canvas>
+            <canvas id="result-1-tree-2" width="40" height="300" class="canvas canvas--trees"></canvas>
+          </div>
           <div class="result__image">
-            <picture>
-              <source srcset="img/result1-mob.png 1x, img/result1-mob@2x.png 2x" media="(max-width: 768px) and (orientation: portrait)">
-              <img src="img/result1.png" srcset="img/result1@2x.png 2x" alt="">
-            </picture>
+            <canvas id="result-1-sea-calf" width="500" height="800" class="canvas"></canvas>
+            <!--            <picture>-->
+            <!--              <source srcset="img/result1-mob.png 1x, img/result1-mob@2x.png 2x" media="(max-width: 768px) and (orientation: portrait)">-->
+            <!--              <img src="img/result1.png" srcset="img/result1@2x.png 2x" alt="">-->
+            <!--            </picture>-->
+          </div>
+          <div class="result__image result__image--snowflake">
+            <canvas id="result-1-snowflake" width="220" height="350" class="canvas canvas--snowflake"></canvas>
+          </div>
+          <div class="result__image result__image--snowflake-2">
+            <canvas id="result-1-snowflake-2" width="220" height="350" class="canvas canvas--snowflake"></canvas>
           </div>
           <h2 class="result__title">
             <span class="visually-hidden">ПОбеда!</span>

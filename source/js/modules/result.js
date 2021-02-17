@@ -1,3 +1,9 @@
+import result1Background from '../view/results-1/background';
+import result1Airplane from '../view/results-1/airplane';
+import result1Snowflake from '../view/results-1/snowflake';
+import result1Trees from '../view/results-1/trees';
+import result1SeaCalf from '../view/results-1/ice-and-sea-calf';
+
 export default () => {
   let showResultEls = document.querySelectorAll(`.js-show-result`);
   let results = document.querySelectorAll(`.screen--result`);
@@ -24,6 +30,12 @@ export default () => {
             const imgTemplate1 = document.createElement(`div`);
             imgTemplate1.innerHTML = `<img src="img/title-victory.svg?${Math.random()}" alt="">`;
             resultTitle.appendChild(imgTemplate1);
+
+            result1Background();
+            result1Airplane();
+            result1Snowflake();
+            result1Trees();
+            result1SeaCalf();
 
             break;
 
